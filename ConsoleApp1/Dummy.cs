@@ -10,7 +10,8 @@ namespace ConsoleApp1
     {
         static void Main(string[] arg)
         {
-            FindPalindrome("GADACAG");
+            // FindPalindrome("GADACAG");
+            GCDOfTwoNumbers(15, 45);
             Console.ReadLine();
         }
 
@@ -30,6 +31,23 @@ namespace ConsoleApp1
             }
 
             Console.WriteLine($"Given input {input} is palindrome");
+        }
+
+        static void GCDOfTwoNumbers(int num1, int num2)
+        {
+            // If numbers are -ve, convert them to +ve
+            num1 = num1 > 0 ? num1 : -num1;
+            num2 = num2 > 0 ? num2 : -num2;
+
+            while (num1 != num2)
+            {
+                if(num1 > num2)
+                    num1 -= num2;
+                else
+                    num2 -= num1;
+            }
+
+            Console.WriteLine($"GCD is {num1}");
         }
     }
 }
