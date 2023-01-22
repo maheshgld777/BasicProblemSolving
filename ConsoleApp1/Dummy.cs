@@ -10,7 +10,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] arg)
         {
-            FindPalindrome("GADAG");
+            FindPalindrome("GADACAG");
             Console.ReadLine();
         }
 
